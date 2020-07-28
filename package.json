@@ -8,6 +8,7 @@
     "bcryptjs": "^2.4.3",
     "express": "^4.17.1",
     "graphql": "^15.3.0",
+    "nodemon": "^2.0.4",
     "pg": "^8.3.0",
     "reflect-metadata": "^0.1.13",
     "ts-node": "^8.10.2",
@@ -16,9 +17,10 @@
     "typescript": "^3.9.7"
   },
   "scripts": {
-    "start": "ts-node src/index.ts"
+    "start": "nodemon --exec ts-node src/index.ts"
   },
   "devDependencies": {
-    "@types/bcryptjs": "^2.4.2"
+    "@types/bcryptjs": "^2.4.2",
+    "ts-node-dev": "^1.0.0-pre.56"
   }
 }
