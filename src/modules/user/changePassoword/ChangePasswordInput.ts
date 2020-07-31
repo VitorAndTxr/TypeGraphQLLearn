@@ -3,13 +3,8 @@ import { InputType, Field } from "type-graphql";
 import { PasswordInput } from "../../shared/PasswordInput";
 
 @InputType()
-export class RegisterInput extends PasswordInput{
+export class ChangePasswordInput extends PasswordInput{
     @Field()
-    firstName: string;
+    token: string;
 
-    @Field()
-    lastName: string;
-    
-    @Field()
-    email: string;
 }

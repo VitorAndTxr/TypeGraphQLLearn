@@ -8,21 +8,15 @@ import connectRedis from 'connect-redis';
 import cors from "cors";
 
 import { redis } from "./redis";
-import { RegisterResolver } from "./modules/user/Register"
-import { LoginResolver } from "./modules/Login";
-import { ConfirmUserResolver } from "./modules/user/ConfirmUser";
+
+
 
 
 const main = async () => {
     await createConnection();
 
     const schema = await buildSchema({
-        resolvers:
-        [
-            RegisterResolver, 
-            LoginResolver,
-            ConfirmUserResolver
-        ],
+        resolvers: [__dirname + "/modules/**/*.ts"],
         authChecker: ({context: {req}}) =>{
 
             return !!req.session.userId;
