@@ -14,8 +14,8 @@
       "strictNullChecks": true,
       "strictFunctionTypes": true,
       "noImplicitThis": true,
-      "noUnusedLocals": true,
-      "noUnusedParameters": true,
+      "noUnusedLocals": false,
+      "noUnusedParameters": false,
       "noImplicitReturns": true,
       "esModuleInterop": true,
       "noFallthroughCasesInSwitch": true,
@@ -24,6 +24,7 @@
       "experimentalDecorators": true,
       "skipLibCheck": true,
       "baseUrl": ".",
+      "types":["node", "jest", "babel__core"],
       "rootDir": "src"
     },
     "exclude": ["node_modules"],
